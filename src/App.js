@@ -12,7 +12,12 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Router>
-        <Navigation items={[]} />
+        <Navigation
+          items={[
+            { content: "Homepage", to: "/" },
+            { content: "Budget", to: "/budget" },
+          ]}
+        />
         <Switch>
           <Route exact path="/">
             Home Page

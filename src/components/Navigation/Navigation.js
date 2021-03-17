@@ -1,18 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 
 import { Wrapper } from "components";
-
-const Container = styled.div`
-  background-color: ${({ theme }) => theme.colors.gray.light};
-  display: flex;
-  padding: ${({ theme }) => theme.spacing.sm}px 0;
-  justify-content: space-between;
-`;
-
-const List = styled.ul`
-  display: flex;
-`;
+import { Container, List } from "./Navigation.css";
 
 const Navigation = ({ items }) => {
   return (
@@ -21,7 +10,7 @@ const Navigation = ({ items }) => {
         <List>
           {items.map((item) => (
             <li>
-              <a>{item.content}</a>
+              <a href="/">{item.content}</a>
             </li>
           ))}
         </List>

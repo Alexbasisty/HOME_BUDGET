@@ -2,12 +2,16 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./index.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { useTranslation } from "react-i18next";
 
 import { Navigation, Wrapper } from "components";
 
 import theme from "utils/theme";
 
 function App() {
+  // eslint-disable-next-line
+  // const { t, i18n } = useTranslation("common");
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
@@ -36,5 +40,11 @@ function App() {
     </ThemeProvider>
   );
 }
+
+// const RootApp = () => (
+//   <React.Suspense fallback="Loading...">
+//     <App />
+//   </React.Suspense>
+// );
 
 export default App;

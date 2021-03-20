@@ -4,7 +4,7 @@ import GlobalStyles from "./index.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import { useTranslation } from "react-i18next";
 
-import { Navigation, Wrapper } from "components";
+import { Navigation, Wrapper, LoadingIndicator } from "components";
 
 import theme from "utils/theme";
 
@@ -31,7 +31,7 @@ function App() {
         <Wrapper>
           <Switch>
             <Route exact path="/">
-              Home Page
+              <LoadingIndicator />
             </Route>
             <Route path="/budget">Budget page</Route>
           </Switch>

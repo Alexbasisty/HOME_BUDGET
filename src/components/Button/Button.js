@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { InlineButton, RegularButton } from "./Button.css";
 
-const Button = ({ type, children, ...props }) => {
+const Button = ({ variant, children, ...props }) => {
+  const { to } = props;
   const Component = (() => {
-    switch (type) {
+    switch (variant) {
       case "inline":
         return InlineButton;
       case "regular":
@@ -14,10 +16,12 @@ const Button = ({ type, children, ...props }) => {
     }
   })();
 
-  return (
-    <div>
+  return to ? (
+    <Link {...props}>
       <Component {...props}>{children}</Component>
-    </div>
+    </Link>
+  ) : (
+    <Component {...props}>{children}</Component>
   );
 };
 

@@ -4,7 +4,7 @@ import GlobalStyles from "./index.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import { useTranslation } from "react-i18next";
 
-import { Navigation, Wrapper, LoadingIndicator } from "components";
+import { Navigation, Wrapper, LoadingIndicator, Button } from "components";
 
 import theme from "utils/theme";
 
@@ -23,8 +23,8 @@ function App() {
           ]}
           RightElement={
             <div>
-              <button>pl</button>
-              <button>en</button>
+              <Button type="inline">pl</Button>
+              <Button type="inline">en</Button>
             </div>
           }
         />

@@ -23,8 +23,8 @@ function App() {
           ]}
           RightElement={
             <div>
-              <Button variant="inline">pl</Button>
-              <Button variant="inline">en</Button>
+              <Button variant="regular">pl</Button>
+              <Button variant="regular">en</Button>
             </div>
           }
         />
